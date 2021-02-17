@@ -12,7 +12,7 @@
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="BuildPathsPropertyPage">
-		<item key="pageIndex" value="2"/>
+		<item key="pageIndex" value="3"/>
 	</section>
 	<section name="NewPackageWizardPage">
 		<item key="create_package_info_java" value="false"/>
@@ -90,5 +90,13 @@
 		<item key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_HEIGHT" value="380"/>
 		<item key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_SIZE" value="true"/>
 		<item key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_LOCATION" value="false"/>
+	</section>
+	<section name="RefactoringWizard.preview">
+		<item key="width" value="600"/>
+		<item key="height" value="400"/>
+	</section>
+	<section name="RenameInformationPopup">
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
 	</section>
 </section>

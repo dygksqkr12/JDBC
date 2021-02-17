@@ -44,7 +44,7 @@ public class MemberDao {
 			//2. connection객체 생성(url, user, password)
 			conn = DriverManager.getConnection(url, user, password);
 			
-			//3. 자동커밋여부 설정 : true(기본값 ) / false -> app에서 직접 트랜잭션 제어
+			//3. 자동커밋여부 설정(DML) : true(기본값 ) / false -> app에서 직접 트랜잭션 제어
 			conn.setAutoCommit(false);
 			
 			//4. PreparedStatement 객체생성(미완성쿼리) 및 값대입
