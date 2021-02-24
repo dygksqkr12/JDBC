@@ -19,4 +19,40 @@ public class ProductService {
 		return list;
 	}
 
+	public Stock selectOne(String productId) {
+		Connection conn = getConnection();
+		Stock stock = productDao.selectOne(conn, productId);
+		close(conn);
+		return stock;
+	}
+
+	public Stock selectName(String productName) {
+		Connection conn = getConnection();
+		Stock stock = productDao.selectName(conn, productName);
+		close(conn);
+		return stock;
+	}
+
+	public int insertProduct(Stock stock) {
+		Connection conn = getConnection();
+		int s = productDao.insertProduct(conn, stock);
+		close(conn);
+		return s;
+	}
+
+	public int updateProduct(Stock s) {
+		Connection conn = getConnection();
+		int result = productDao.updateProduct(conn, s);
+		close(conn);
+		return result;
+	}
+
+	public int deleteProduct(String productId) {
+		Connection conn = getConnection();
+		int result = productDao.deleteProduct(conn, productId);
+		close(conn);
+		return result;
+	}
+
+
 }

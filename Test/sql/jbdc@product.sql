@@ -21,7 +21,7 @@ create table product_io(
     status char(1) check(status in ('I', 'O')),
     constraint pk_io_no primary key (io_no),
     constraint fk_product_id foreign key (product_id)
-                             references product_stock (product_id)
+                             references product_stock (product_id) ON DELETE CASCADE
 );
 
 --시퀀스 생성
@@ -62,6 +62,14 @@ values(seq_io_no.nextval, '1', sysdate, 50, 'I');
 
 commit;
 
+select * from product_stock order by product_id desc;
 
 
+update product_stock set product_name = '사과', price = 4000, description = '맛있는사과', stock = 50 where product_id = 1;
 
+delete from product_stock where product_id = 2;
+
+select  * from product_io order by io_no desc;
+insert into product_io values(seq_io_no.nextval, 1, default, 10, 'I');
+
+rollback;
